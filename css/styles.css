@@ -34,7 +34,7 @@ body{
 }
 
 section{
-    min-height: 100vh;
+    /* min-height: 100vh; */
     padding:0 9%;
     padding-top: 7.5rem;
     padding-bottom: 2rem;
@@ -262,11 +262,11 @@ header label{
     padding: 0 10%;
     padding-top: 16.5rem;
 }  
-.features .linha
+.linha
 {   
-    width: 80%;
+    width: 100%;
     margin-top: -7%;
-    position: absolute;
+    /* position: absolute; */
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0px 1px 0.5px rgb(0 0 0 / 25%);
 }
@@ -317,7 +317,8 @@ header label{
 }
 .about .linha
 {   
-    width: 85%;
+    width: 100%;
+    /* position: absolute; */
     margin-top: -7%;
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0px 1px 0.5px rgb(0 0 0 / 25%);
@@ -439,7 +440,7 @@ header label{
 
     .about{
         padding: 19% 13%;
-        padding-bottom: 0;
+        /* padding-bottom: 0; */
         background-position: right;
     }
     .about .buttons

@@ -59,13 +59,13 @@ section{
 
 .heading{
     text-align: center;
-    background:var(--gradient);
+    background:var(--blue);
     color:transparent;
     -webkit-background-clip: text;
     background-clip: text;
     font-size: 3.5rem;
     text-transform: uppercase;
-    padding:1rem;
+    padding:4rem;
 }
 
 header{
@@ -149,15 +149,24 @@ header label{
     width: 50%;
     height: 100%;
     font-size: 1.8rem;
+    margin-left: 0%;
+}
+.home .content
+{   
+    width: 50%;
+    height: 100%;
+    font-size: 1.8rem;
     margin-left: 7%;
 }
 .home h1{
+    color: #333;
     text-transform: uppercase;
 }
 .home span{
     font-weight: bold;
 }
-.home p{font-family: 'Cairo', sans-serif;}
+.home p{color: #666;}
+/* ----------------------------------------------------------------- */
 .wave
 {
     min-height: 44vh;
@@ -176,7 +185,7 @@ header label{
     overflow: hidden;
 }
 .wave2{
-    min-height: 262px;
+    min-height: 283px;
     position: absolute;
     max-width: 83%;
     width: 100%;
@@ -246,7 +255,108 @@ header label{
         transform: translateX(-1810px);
     }
   }
+  /* ----------------------------------------------------------------- */
+/*------------------------------- FEATURES -------------------------------*/
+.features
+{
+    padding: 0 10%;
+    padding-top: 16.5rem;
+}  
+.features .linha
+{   
+    width: 80%;
+    margin-top: -7%;
+    position: absolute;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 0.5px rgb(0 0 0 / 25%);
+}
+.features .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
+.features .box-container .box{
+    flex:1 1 30rem;
+    background:#fff;
+    border-radius: .5rem;
+    border:.1rem solid rgba(0,0,0,.2);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    margin:1.5rem;
+    padding:3rem 2rem;
+    border-radius: .5rem;
+    text-align: center;
+    transition: .2s linear;
+}
+
+.features .box-container .box img{
+    height: 15rem;
+}
+
+.features .box-container .box h3{
+    font-size: 2rem;
+    color:#333;
+    padding-top: 1rem;
+}
+
+.features .box-container .box p{
+    font-size: 1.3rem;
+    color:#666;
+    padding: 1rem 0;
+}
+/* ----------------------------------------------------------------- */
+/*------------------------------- ABOUT -------------------------------*/
+
+.about{
+    background:url(../images/about-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 3rem;
+}
+.about .linha
+{   
+    width: 80%;
+    margin-top: -7%;
+    position: absolute;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 0.5px rgb(0 0 0 / 25%);
+}
+.about .column{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about .column .image{
+    flex:1 1 40rem;
+}
+
+.about .column .image img{
+    width:100%;
+}
+
+.about .column .content{
+    flex:1 1 40rem;
+}
+
+.about .column .content h3{
+    font-size: 3rem;
+    color:#666;
+}
+
+.about .column .content p{
+    font-size: 1.5rem;
+    color:#666;
+    padding:1rem 0;
+}
+
+.about .column .content .buttons a:last-child{
+    margin-left: 0rem;
+}
+
+/* ----------------------------------------------------------------- */
 /* ----------------------------------------------------------------- */
 
 /* media queries  */
@@ -265,6 +375,9 @@ header label{
         padding:0 3%;
         padding-top: 7.5rem;
         padding-bottom: 2rem;
+    }
+    .wave2{
+        min-height: 240px;
     }
 
 }
@@ -313,22 +426,47 @@ header label{
         width:100%;
     }
 
-    .home .content h3{
-        font-size: 3.6rem;
+    .home .content {
+        width: 80%;
+        margin-left: 0%;
     }
 
     .home .content p{
-        font-size: 1.5rem;
+        text-align: justify;
+        font-size: 2rem;
     }
 
     .about{
+        padding: 19% 13%;
+        padding-bottom: 0;
         background-position: right;
     }
-
+    .about .linha{ width: 75%;}
+    .about .buttons
+    {
+        font-size: 8pt;
+    }
+    .about .btn {
+        margin-top: 3rem;
+        margin: 15% 0;
+        padding: 17px;
+        font-size: 1.5em;
+    }
     .newsletter p{
         width:auto;
     }
-
+    .wave2 {
+        min-height: 204px;
+    }
+    .home .home-img {padding: 0px 7%;}
+    .btn {
+        display: block;
+        margin-top: 5rem;
+        text-align: center;
+        font-size: 2em;
+        padding: .8rem 9rem;
+    }
+    
 }
 
 @media (max-width:450px){
@@ -337,6 +475,23 @@ header label{
         font-size: 50%;
     }
 
+    .home .content {
+        width: 80%;
+        margin-left: 0%;
+    }
+
+    .home .content p{
+        text-align: justify;
+        font-size: 2rem;
+    }
+    .btn {
+        margin-top: 3rem;
+        padding: 0;
+        font-size: 1.5em;
+    }
+    .features {
+        padding-top: 10rem;
+    }
     .about .column .content .buttons a{
         width:100%;
         text-align: center;

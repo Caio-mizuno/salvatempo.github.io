@@ -279,6 +279,7 @@ header label{
 
 .features .box-container .box{
     flex:1 1 30rem;
+    position: relative;
     background:#fff;
     border-radius: .5rem;
     border:.1rem solid rgba(0,0,0,.2);
@@ -289,19 +290,30 @@ header label{
     text-align: center;
     transition: .2s linear;
 }
+.box-container:hover .box{
+    filter: blur(20px);
+    transform: scale(0.9);
+    opacity: 0.5;
 
+}
+.box-container .box:hover{
+    filter: blur(0px);
+    transform: scale(1.1);
+    opacity: 1;
+
+}
 .features .box-container .box img{
     height: 15rem;
 }
 
 .features .box-container .box h3{
-    font-size: 2rem;
+    font-size: 2em;
     color:#333;
     padding-top: 1rem;
 }
 
 .features .box-container .box p{
-    font-size: 1.3rem;
+    font-size: 1.4em;
     color:#666;
     padding: 1rem 0;
 }
@@ -357,6 +369,44 @@ header label{
 .about .column .content .buttons a:last-child{
     margin-left: 0rem;
 }
+
+.subirBox{
+    position: fixed;
+    
+    right: 2%;
+    bottom: 5%;
+}
+
+.btn-subir{
+    
+    width: 50px;
+    height: 50px;
+    background: hsl(189, 60%, 60%);
+    /* border-color: #f5af19; */
+    border: 5px outset #5cc4d6;
+    box-shadow: 1px 1px 1px #333;
+    border-radius: 5px;
+    text-align: -webkit-center;
+    transform: rotate(45deg);
+}
+.sbtn{
+    font-size: 4.4em;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: -webkit-center;
+    top: -10%;
+    color: #ff7144;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.24);
+    animation: moversubir 1s ease-in-out alternate infinite;
+
+}
+@keyframes moversubir {
+    0%{transform: translateY(6px);}
+    100%{transform: translateY(-6px);}
+}
+
+
 
 /* ----------------------------------------------------------------- */
 /* ----------------------------------------------------------------- */
